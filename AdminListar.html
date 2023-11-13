@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAGINA</title>
+    <link rel="stylesheet" href="styleListar.css">
+	<link rel="stylesheet" href="styledescr.css">
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/script.js"></script>
+
+</head>
+
+<body>
+
+	<header class="header">
+        <a href="#" class="logo"> </i> WΔKΔNĐΔ. </a>
+
+        <nav class="navbar">
+            <a href="AdminListar.html">Inicio</a>
+            <a href="AdminListaSolicitud.html">solicitudes</a>
+            <a href="Adminsubirjuego.html">Subir Juego</a>
+        </nav>
+
+        <div class="icons">
+            <div id="user-btn" class="fas fa-user"><a>|admin</a></div>
+            <div id="user-dropdown" class="user-dropdown">
+                <a href="#">Mi Perfil</a>
+                <a href="AdminPaginaInicio.html" id="logout-btn">Cerrar Sesión</a>
+            </div>
+        </div>
+        
+        <script>
+            const userBtn = document.getElementById("user-btn");
+            const userDropdown = document.getElementById("user-dropdown");
+            const logoutBtn = document.getElementById("logout-btn");
+        
+            // Mostrar/ocultar el menú desplegable al hacer clic en el icono del usuario
+            userBtn.addEventListener("click", () => {
+                userDropdown.classList.toggle("active");
+            });
+        
+            // Cerrar la sesión al hacer clic en "Cerrar Sesión"
+            logoutBtn.addEventListener("click", () => {
+                // Agrega aquí la lógica para cerrar la sesión, por ejemplo, redirigiendo a la página de inicio de sesión.
+                alert("Cerrando sesión..."); // Puedes reemplazar esto con tu lógica real.
+            });
+        
+            // Cierra el menú desplegable al hacer clic en cualquier otro lugar de la página
+            document.addEventListener("click", (event) => {
+                if (event.target !== userBtn && !userDropdown.contains(event.target)) {
+                    userDropdown.classList.remove("active");
+                }
+            });
+           
+        </script>
+    </header>
+    <div class="juegos-publicados">
+        <p>Juegos Publicados</p>
+        <div class="store-wrapper">
+			<div class="category_list">
+				<a href="#" class="category_item" category="all">TODO</a>
+				<a href="#" class="category_item" category="acción">ACCIÓN</a>
+				<a href="#" class="category_item" category="aventura">AVENTURA</a>
+				<a href="#" class="category_item" category="puzle">PUZLES</a>
+				<a href="#" class="category_item" category="deportes">DEPORTES</a>
+				<a href="#" class="category_item" category="luchas">LUCHAS</a>
+                <a href="#" class="category_item" category="terror">TERROR</a>
+			</div>
+            <section class="products-list">
+				<div class="product-item" category="acción">
+					<img src="img/Apex.jpg" alt="" >
+					<a href="#">APEX LEGENDS™</a>
+				</div>
+				<div class="product-item" category="acción">
+					<img src="img/ark.jpg" alt="" >
+					<a href="#">ARK: SURVIVAL ASCENDED</a>
+				</div>
+				<div class="product-item" category="acción">
+					<img src="img/cyberpunk.jpg" alt="" >
+					<a href="#">CYBERPUNK 2077</a>
+				</div>
+				<div class="product-item" category="aventura">
+					<img src="img/among.jpg" alt="" >
+					<a href="AdminDescripcionjuego.html">AMONG US</a>
+				</div>
+				<div class="product-item" category="aventura">
+					<img src="img/lost.jpg" alt="" >
+					<a href="#">LOST ARK</a>
+				</div>
+				<div class="product-item" category="aventura">
+					<img src="img/gta.jpg" alt="" >
+					<a href="#">GRAND THEFT AUTO V</a>
+				</div>
+				<div class="product-item" category="aventura">
+					<img src="img/rust.jpg" alt="" >
+					<a href="#">RUST</a>
+				</div>
+				<div class="product-item" category="puzle">
+					<img src="img/ItTakesTwo.jpg" alt="" >
+					<a href="#">IT TAKES TWO</a>
+				</div>
+                <div class="product-item" category="puzle">
+					<img src="img/stray.jpg" alt="" >
+					<a href="#">STRAY</a>
+				</div>
+				<div class="product-item" category="puzle">
+					<img src="img/superliminal.jpg" alt="" >
+					<a href="#">SUPERLIMINAL</a>
+				</div>
+                <div class="product-item" category="deportes">
+					<img src="img/fc24.jpg" alt="" >
+					<a href="#">EA SPORTS FC™ 24</a>
+				</div>
+                <div class="product-item" category="deportes">
+					<img src="img/nba.jpg" alt="" >
+					<a href="#">NBA 2K24</a>
+				</div>
+                <div class="product-item" category="deportes">
+					<img src="img/f122.jpg" alt="" >
+					<a href="#">F1® 22</a>
+				</div>
+                <div class="product-item" category="luchas">
+					<img src="img/partyanimals.jpg" alt="" >
+					<a href="#">PARTY ANIMALS</a>
+				</div>
+                <div class="product-item" category="luchas">
+					<img src="img/mk1.jpg" alt="" >
+					<a href="#">MORTAL KOMBAT 1</a>
+				</div>
+                <div class="product-item" category="luchas">
+					<img src="img/brawl.jpg" alt="" >
+					<a href="#">BRAWLHALLA</a>
+				</div>
+                <div class="product-item" category="all">
+				</div>
+			</section>
+    </div>
+</body>
+</html>
